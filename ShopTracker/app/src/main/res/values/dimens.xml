@@ -7,4 +7,6 @@
     <dimen name="app_bar_height">250dp</dimen>
     <dimen name="app_bar_image_layout_height">200dp</dimen>
     <dimen name="toolbar_height">50dp</dimen>
+
+    <dimen name="tracker_recommend_item_height">75dp</dimen>
 </resources>
