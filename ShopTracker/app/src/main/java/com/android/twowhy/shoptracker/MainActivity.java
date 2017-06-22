@@ -1,18 +1,25 @@
 package com.android.twowhy.shoptracker;
 
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+        implements View.OnTouchListener, View.OnClickListener {
 
+    private static final String TAG = MainActivity.class.getSimpleName();
+
+    private CoordinatorLayout mCoordinatorLayout;
     private ArrayList<Shop> mShops;
     private RecyclerView mTrackerRecommendRecyclerView;
     private TrackerRecommendAdapter mTrackerRecommendAdapter;
@@ -22,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mCoordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinator_layout);
+        mCoordinatorLayout.setOnTouchListener(this);
+        mCoordinatorLayout.setOnClickListener(this);
         mShops = new ArrayList<>();
         setShops();
         mTrackerRecommendRecyclerView = (RecyclerView)
@@ -99,4 +109,29 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        Log.i(TAG, "dispatchTouchEvent MotionEvent: getX(): " + ev.getX());
+        Log.i(TAG, "dispatchTouchEvent MotionEvent: getY(): " + ev.getY());
+        return super.dispatchTouchEvent(ev);
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        switch (v.getId()) {
+            case R.id.coordinator_layout:
+                Log.i(TAG, "onTouch MotionEvent: getX(): " + event.getX());
+                Log.i(TAG, "onTouch MotionEvent: getY(): " + event.getY());
+                break;
+        }
+        return false;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.coordinator_layout:
+                break;
+        }
+    }
 }

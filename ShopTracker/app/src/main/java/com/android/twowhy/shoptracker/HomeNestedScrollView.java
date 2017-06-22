@@ -37,9 +37,10 @@ public class HomeNestedScrollView extends NestedScrollView {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        if ((!isScrollable))
-            return false;
-        return super.onInterceptTouchEvent(ev);
+//        if ((!isScrollable))
+//            return false;
+//        return super.onInterceptTouchEvent(ev);
+        return isScrollable() && super.onInterceptTouchEvent(ev);
     }
 
     @Override
@@ -52,14 +53,21 @@ public class HomeNestedScrollView extends NestedScrollView {
 
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
-        switch (ev.getAction() & 0xFF) {
-            default:
-                return super.onTouchEvent(ev);
-            case 0:
-        }
-        if (isScrollable)
-            return super.onTouchEvent(ev);
-        return isScrollable;
+//        switch (ev.getAction() & 0xFF) {
+//            default:
+//                return super.onTouchEvent(ev);
+//            case 0:
+//        }
+//        if (isScrollable)
+//            return super.onTouchEvent(ev);
+//        return isScrollable;
+
+//        if (isScrollable()) {
+//            return super.onTouchEvent(ev);
+//        } else {
+//            return false;
+//        }
+        return isScrollable() && super.onTouchEvent(ev);
     }
 
     public void setOnScrollChangedListener(HomeNestedScrollChangedListener nestedScrollChangedListener) {
