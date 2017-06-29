@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<declare-styleable name="ShopAttributeLayout">-->
+        <!--<attr name="shop_attributes" format="enum" />-->
+    <!--</declare-styleable>-->
+    <!---->
+    <!--<attr name="shop_attributes" format="enum">-->
+        <!--<enum name="now" />-->
+        <!--<enum name="couple" />-->
+        <!--<enum name="parking" />-->
+        <!--<enum name="shower" />-->
+        <!--<enum name="sleep" />-->
+    <!--</attr>-->
+</resources>

@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    private class ShopRecommendAdapter extends RecyclerView.Adapter<TrackerRecommendViewHolder> {
+    private class ShopRecommendAdapter extends RecyclerView.Adapter<ShopRecommendViewHolder> {
 
         private ArrayList<ShopInfo> mShopInfos;
 
@@ -64,15 +64,15 @@ public class MainActivity extends AppCompatActivity
         }
 
         @Override
-        public TrackerRecommendViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        public ShopRecommendViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
             View view = layoutInflater.inflate(R.layout.list_item_shop_recommend, parent, false);
-            return new TrackerRecommendViewHolder(view);
+            return new ShopRecommendViewHolder(view);
         }
 
         @Override
-        public void onBindViewHolder(TrackerRecommendViewHolder holder, int position) {
-            holder.bindTrackerRecommend(mShopInfos.get(position));
+        public void onBindViewHolder(ShopRecommendViewHolder holder, int position) {
+            holder.bindShopRecommend(mShopInfos.get(position));
         }
 
         @Override
@@ -81,21 +81,21 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    private class TrackerRecommendViewHolder extends RecyclerView.ViewHolder {
+    private class ShopRecommendViewHolder extends RecyclerView.ViewHolder {
 
         private ShopInfo mShopInfo;
 
-        private TextView mShopRecommendShopNameTextView;
+        private TextView mShopNameTextView;
 
-        public TrackerRecommendViewHolder(View itemView) {
+        public ShopRecommendViewHolder(View itemView) {
             super(itemView);
-            mShopRecommendShopNameTextView =
-                    (TextView) itemView.findViewById(R.id.list_item_shop_recommend_name);
+            mShopNameTextView =
+                    (TextView) itemView.findViewById(R.id.shop_name_text_view);
         }
 
-        public void bindTrackerRecommend(ShopInfo shopInfo) {
+        public void bindShopRecommend(ShopInfo shopInfo) {
             mShopInfo = shopInfo;
-            mShopRecommendShopNameTextView.setText(String.valueOf(mShopInfo.getName()));
+            mShopNameTextView.setText(String.valueOf(mShopInfo.getName()));
         }
     }
 

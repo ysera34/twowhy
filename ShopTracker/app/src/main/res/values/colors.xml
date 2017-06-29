@@ -6,6 +6,11 @@
     <color name="colorAccentTransparent">#33F06664</color>
     <color name="colorBackground">#F5F5F5</color>
     <color name="colorWhite">#FFFFFF</color>
-    
+    <color name="colorBlack">#000000</color>
+
+    <color name="colorRedA400">#ff1744</color>
+    <color name="colorPinkA400">#F50057</color>
     <color name="colorGray400">#BDBDBD</color>
+    <color name="colorYellow600">#FDD835</color>
+    <color name="colorYellow500">#FFEB3B</color>
 </resources>
