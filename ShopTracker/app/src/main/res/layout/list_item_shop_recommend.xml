@@ -6,7 +6,7 @@
               android:background="@color/colorWhite">
 
     <TextView
-        android:id="@+id/list_item_tracker_recommend_name"
+        android:id="@+id/list_item_shop_recommend_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"/>
