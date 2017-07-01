@@ -17,18 +17,18 @@ public class ShopAttributeView extends TextView {
         super(context, attrs);
     }
 
-    public ShopAttributeView(Context context, AttributeSet attrs, String text, boolean hasAttribute) {
+    public ShopAttributeView(Context context, AttributeSet attrs, String attributeName, boolean hasAttribute) {
         this(context, attrs);
-        mText = text;
+        mAttributeName = attributeName;
         mHasAttribute = hasAttribute;
         initializeView();
     }
 
-    private String mText;
+    private String mAttributeName;
     private boolean mHasAttribute;
 
     private void initializeView() {
-        setText(String.valueOf(mText));
+        setText(String.valueOf(mAttributeName));
         setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
         setPadding(getPixelFromDp(4), getPixelFromDp(2), getPixelFromDp(4), getPixelFromDp(2));
         if (mHasAttribute) {

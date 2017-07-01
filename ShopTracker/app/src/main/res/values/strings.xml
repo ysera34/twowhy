@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">ShopTracker</string>
+    
+    <string-array name="shop_attributes">
+        <item>@string/shop_attribute_1</item>
+        <item>@string/shop_attribute_2</item>
+        <item>@string/shop_attribute_3</item>
+        <item>@string/shop_attribute_4</item>
+        <item>@string/shop_attribute_5</item>
+    </string-array>
+    
+    <string name="shop_attribute_1">지금할인</string>
+    <string name="shop_attribute_2">커플할인</string>
+    <string name="shop_attribute_3">주차가능</string>
+    <string name="shop_attribute_4">수면가능</string>
+    <string name="shop_attribute_5">샤워가능</string>
+
 </resources>
