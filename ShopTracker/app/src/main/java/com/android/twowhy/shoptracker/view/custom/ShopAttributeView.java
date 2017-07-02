@@ -29,7 +29,7 @@ public class ShopAttributeView extends TextView {
 
     private void initializeView() {
         setText(String.valueOf(mAttributeName));
-        setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
+        setTextSize(TypedValue.COMPLEX_UNIT_SP, 10);
         setPadding(getPixelFromDp(4), getPixelFromDp(2), getPixelFromDp(4), getPixelFromDp(2));
         if (mHasAttribute) {
             setTextColor(getResources().getColor(R.color.colorPinkA400));

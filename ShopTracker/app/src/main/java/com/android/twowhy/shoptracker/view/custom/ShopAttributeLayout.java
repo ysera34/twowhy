@@ -15,7 +15,11 @@ import java.util.Arrays;
 
 public class ShopAttributeLayout extends LinearLayout {
 
-    private ShopAttributeLayout(Context context, AttributeSet attrs) {
+    public ShopAttributeLayout(Context context) {
+        super(context);
+    }
+
+    public ShopAttributeLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 

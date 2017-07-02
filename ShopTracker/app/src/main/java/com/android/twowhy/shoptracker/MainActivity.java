@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity
         mShopInfos = new ArrayList<>();
         mShopRecommendRecyclerView = (RecyclerView) findViewById(R.id.shop_recommend_recycler_view);
         mShopRecommendRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
         updateUI();
         setShops();
     }
