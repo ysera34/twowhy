@@ -13,4 +13,8 @@
     <color name="colorGray400">#BDBDBD</color>
     <color name="colorYellow600">#FDD835</color>
     <color name="colorYellow500">#FFEB3B</color>
+
+    <color name="colorFontLevel0">#F50057</color>
+    <color name="colorFontLevel1">#000000</color>
+    <color name="colorFontLevel2">#4A4A4A</color>
 </resources>
